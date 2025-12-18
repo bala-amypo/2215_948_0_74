@@ -1,16 +1,7 @@
-import com.example.demo.service.*;
-import org.springframework.beans.factory.annotation.*;
+package com.example.demo.controller;
 
-import com.example.demo.entity.*;
-import com.example.demo.service.*;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.bans.factory.annotation.*;
+import org.springframe.web.bind.annotation.GetMapping;
 
-@RestController
-public class studentController{
-    @Autowired
-    studentService service;
-
-    @getMapping("/getAllStudent")
-    public List<studentEntity>getAll(){
-        return service.getAll();
-    }
-}
+import com.ed
