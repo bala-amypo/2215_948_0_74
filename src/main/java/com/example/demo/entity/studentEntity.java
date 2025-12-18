@@ -1,24 +1,21 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.*;
 
 @Entity
-@Table(name = "students")
 public class studentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Name is not valid")
+    @NotBlank(message = "Name is not Valid")
     private String name;
 
-    @Email(message = "Email format is not valid")
+    @Email(message = "Email Format is not Valid")
     private String email;
 
-    // Constructors
     public studentEntity() {}
 
     public studentEntity(Long id, String name, String email) {
@@ -27,7 +24,6 @@ public class studentEntity {
         this.email = email;
     }
 
-    // Getters & Setters
     public Long getId() {
         return id;
     }
