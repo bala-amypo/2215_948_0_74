@@ -1,19 +1,21 @@
 package com.example.demo.controller;
 
+import com.example.demo.entity.StudentEntity;
+import com.example.demo.service.StudentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.bans.factory.annotation.*;
-import org.springframe.web.bind.annotation.GetMapping;
 
-import com.example.demo.entity.*;
-import com.example.demo.service.*;
+import java.util.List;
 
 @RestController
-public class studentController{
-    @AutoWired
-    studentService service;
+public class StudentController {
+
+    @Autowired
+    private StudentService service;
 
     @GetMapping("/getAllStudent")
-    public List<studentEntity>getAll(){
+    public List<StudentEntity> getAll() {
         return service.getAll();
     }
 }
