@@ -28,6 +28,6 @@ public class globalExceptionHandler {
 
     @ExceptionHandler(StudentNotFoundException.class)
     public ResponseEntity<?> handleStudentException(StudentNotFoundException ex){
-          return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+          return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 }
